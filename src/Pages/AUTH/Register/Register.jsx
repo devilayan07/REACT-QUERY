@@ -263,7 +263,7 @@ export default function Register() {
                                 {...register("email", {
                                   required: "Email is required",
                                   pattern: {
-                                    value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                                    // value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                                     message: "Invalid email format",
                                   },
                                 })}

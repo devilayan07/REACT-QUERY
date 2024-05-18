@@ -12,8 +12,6 @@ function Home() {
 
     const {
         data: profile,
-        isLoading: landingpageloading,
-        isError: landingpageError,
       } = useQuery({
         queryKey: ["landing-page-details"],
         queryFn: () => Profile(),

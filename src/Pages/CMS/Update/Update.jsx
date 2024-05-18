@@ -1,7 +1,7 @@
 
 
 
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import React, { useEffect, useState } from "react"; // Importing useState
 import { AddupdateNow } from "../../../Api/Functions/update.api";
 import {
@@ -183,7 +183,7 @@ export default function Update() {
                )}
                {!image && form.image && (
                   <img                     src={`https://wtsacademy.dedicateddevelopers.us/uploads/product/${form?.image}`}
-                     alt="Image"
+                     alt=""
                     style={{ width: "100%", height: "auto" }}
                    />
                 )}

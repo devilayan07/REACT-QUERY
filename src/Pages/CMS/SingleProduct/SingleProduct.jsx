@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { details } from '../../../Api/Functions/details.api';
 import { useQuery } from "@tanstack/react-query";
-import { Box,Grid,CardActionArea,Container,Button,CardActions,Typography,CardContent,CardMedia,Card } from '@mui/material';
+import { Box,CardActionArea,Container,Button,CardActions,Typography,CardContent,CardMedia,Card } from '@mui/material';
 import { product } from '../../../Api/Axios/axiosInstance';
 
 
@@ -12,8 +12,6 @@ function SingleProduct() {
 
     const {
         data: singleproducts,
-        isLoading: landingpageloading,
-        isError: landingpageError,
       } = useQuery({
         queryKey: ["landing-page-details"],
         queryFn: () => details(id),

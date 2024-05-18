@@ -28,9 +28,8 @@
 
 import React from "react";
 // import { Getlandingpagedetails } from "../../../Api/Functions/productList";
-import { useMutation, useQuery,useQueryClient } from "@tanstack/react-query";
-import { loginAPI } from "../../../Api/Functions/login.api";
-import { AddlistNow, listAPI } from "../../../Api/Functions/list.api";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { AddlistNow } from "../../../Api/Functions/list.api";
 import {  Typography, Card, CardMedia, CardContent, CardActions, Button, CardActionArea, Grid } from '@mui/material'
 import { Link } from "react-router-dom";
 import { product } from "../../../Api/Axios/axiosInstance";
@@ -42,8 +41,6 @@ import { queryClient } from './../../../index';
 export default function Products() {
   const {
     data: landingpagedetails,
-    isLoading: landingpageloading,
-    isError: landingpageError,
   } = useQuery({
     queryKey: ["landing-page-details"],
     queryFn: () => AddlistNow(),
